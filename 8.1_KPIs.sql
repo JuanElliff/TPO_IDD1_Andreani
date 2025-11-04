@@ -25,7 +25,7 @@ SELECT
     e.fecha_entrega,
     e.temperatura_registrada
 FROM Lote l
-JOIN DetalleLote dl ON l.id_lote = dl.id_lote
+JOIN DetallePedidoLote dl ON l.id_lote = dl.id_lote
 JOIN DetallePedido dp ON dl.id_detalle_pedido = dp.id_detalle_pedido
 JOIN Pedido p ON dp.id_pedido = p.id_pedido
 JOIN CajaDetalle cd ON l.id_lote = cd.id_lote
@@ -59,14 +59,14 @@ FROM (
    =============================================================== */
 SELECT 
     r.zona,
-    v.tipo,
+	v.refrigerado,
     CAST(100.0 * SUM(c.capacidad_maxima) / SUM(v.capacidad) AS DECIMAL(5,2)) AS UtilizacionFlotaPct
 FROM Entrega e
 JOIN EntregaCaja ec ON e.id_entrega = ec.id_entrega
 JOIN Caja c ON ec.id_caja = c.id_caja
 JOIN DimVehiculo v ON e.id_vehiculo = v.id_vehiculo
 JOIN DimRuta r ON e.id_ruta = r.id_ruta
-GROUP BY r.zona, v.tipo;
+GROUP BY r.zona, v.refrigerado;
 
 
    /* ===============================================================
