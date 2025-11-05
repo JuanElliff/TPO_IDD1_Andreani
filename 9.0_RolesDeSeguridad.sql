@@ -18,4 +18,4 @@ CREATE ROLE rol_admin;
 GRANT SELECT, INSERT ON Pedido TO rol_operador;
 GRANT SELECT, UPDATE, EXECUTE ON SCHEMA::dbo TO rol_supervisor;
 GRANT SELECT ON SCHEMA::dbo TO rol_auditor;
-GRANT CONTROL ON DATABASE::tp_idd_1 TO rol_admin;
+GRANT CONTROL ON DATABASE::tp_idd1_db TO rol_admin;
