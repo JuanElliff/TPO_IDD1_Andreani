@@ -1,0 +1,18 @@
+{
+  "name": "Andreani - Tema Corporativo",
+  "dataColors": [
+    "#C1142B",
+    "#080000",
+    "#808080",
+    "#BCBCBC",
+    "#595959",
+    "#D9D9D9",
+    "#910F21",
+    "#F55569",
+    "#404040",
+    "#FADADD"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#080000",
+  "tableAccent": "#C1142B"
+}
